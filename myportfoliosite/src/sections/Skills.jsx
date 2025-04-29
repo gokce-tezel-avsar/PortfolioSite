@@ -1,49 +1,53 @@
 import {
-    Card,
-    CardText,
-    CardTitle,
-    CardSubtitle,
-    CardGroup
-  } from "reactstrap";
-  
+  Card,
+  CardText,
+  CardTitle,
+  CardSubtitle,
+  CardGroup,
+} from "reactstrap";
+
+const skills = [
+  {
+    title: "JavaScript",
+    description:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animid est laborum.",
+  },
+  {
+    title: "React.Js",
+    description:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animid est laborum.",
+  },
+  {
+    title: "Node.Js",
+    description:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit animid est laborum.",
+  },
+];
+
 export default function Skills() {
-    return (
-<CardGroup id="skills"  className="justify-center" >
-  <Card className="border-none pl-[0]">
-    <CardTitle tag="h1"  >
-    Skills
-    </CardTitle>
-    <Card className="flex flex-row border-none gap-4 pl-[0]">
-    <CardGroup style={{width:"30rem"}} >
-    <CardSubtitle style={{ paddingBlock: "1rem", color: "#443cca"}}
-      tag="h2"
-    >Java Script
-    </CardSubtitle>
-    <CardText>Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit animid est laborum. </CardText>
-    </CardGroup >
-    <CardGroup style={{width:"30rem"}}>
-    <CardSubtitle
-     
-      tag="h2" style={{ paddingBlock: "1rem", color: "#443cca"}}
+  return (
+    <Card
+      id="skills"
+      className="flex flex-col border-none"
+      style={{ marginLeft: "6rem", paddingInline: "0" }}
     >
-     React.Js
-    </CardSubtitle>
-    <CardText>Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit animid est laborum.</CardText>
-    </CardGroup>
-    <CardGroup style={{width:"30rem"}}>
-    <CardSubtitle
-     
-      tag="h2" style={{ paddingBlock: "1rem", color: "#443cca"}}
-    >
-    Node.Js
-    </CardSubtitle>
-    <CardText>Excepteur sint occaecat cupidatat non proident,sunt in culpa qui officia deserunt mollit animid est laborum.</CardText>
-    </CardGroup>
+      <CardGroup className="border-none p-[0]">
+        <CardTitle tag="h1">Skills</CardTitle>
+      </CardGroup>
+
+      <CardGroup>
+        {skills.map((skill, index) => (
+          <Card key={index} className="border-none h-100">
+            <CardSubtitle
+              tag="h2"
+              style={{ paddingBlock: "1rem", color: "#443cca" }}
+            >
+              {skill.title}
+            </CardSubtitle>
+            <CardText>{skill.description}</CardText>
+          </Card>
+        ))}
+      </CardGroup>
     </Card>
-  </Card>
-</CardGroup>
-
-    )
+  );
 }
-
-

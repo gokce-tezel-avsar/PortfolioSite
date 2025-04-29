@@ -9,10 +9,10 @@ import {
 
 export default function Profile(){
     return (
-        <CardGroup className="flex">
-        <CardTitle tag="h1">Profile</CardTitle>
+  <CardGroup className="flex" style={{marginLeft:"6rem"}}>
+        <CardTitle className="mb-[2rem]"  tag="h1">Profile</CardTitle>
         <CardBody className="flex flex-row">
-<CardBody >
+          <CardBody className="flex flex-col">
           <CardSubtitle style={{ paddingBlock: "1rem", color: "#443cca"}} tag="h2">Profile</CardSubtitle>
           <Card className="flex flex-row border-none ">
 <CardGroup className="flex flex-col">   
@@ -28,9 +28,9 @@ export default function Profile(){
    <CardText>Frontend, UI</CardText>
 </CardGroup>
 </Card>
-</CardBody>
+            </CardBody>
 
-     <CardBody>
+     <CardBody className="flex flex-col">
 
             <CardSubtitle style={{ paddingBlock: "1rem", color: "#443cca"}} tag="h2">About Me</CardSubtitle>
             <CardText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit asperiores officiis facilis inventore esse, ullam dolorum ducimus, repellendus atque adipisci culpa magni.</CardText>

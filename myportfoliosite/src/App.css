@@ -2,10 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+margin: 0 auto;
+padding-left: 0;
 }
 
 .logo {
@@ -38,6 +36,11 @@ html {
 
 .card {
   padding: 2em;
+}
+
+#projects{
+  display: flex;
+  justify-content: space-between;
 }
 
 .read-the-docs {
